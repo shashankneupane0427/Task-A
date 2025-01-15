@@ -1,0 +1,131 @@
+/* style.css */
+body {
+    background: linear-gradient(to right, #FFA500, #8A2BE2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    perspective: 1000px; /* Add perspective to the body */
+}
+
+.card-container {
+    position: relative;
+    width: 380px;
+    height: 900px;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.08); /* Slightly brighter background */
+    border-radius: 20px;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3), /* Increased shadow blur */
+                12px 12px 30px rgba(0, 0, 0, 0.35),
+                inset 0 0 2px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(14px); /* Increased blur */
+    -webkit-backdrop-filter: blur(14px);
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Slightly stronger border */
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d; /* Important for 3D effect on children */
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, top 0.5s ease-in-out, z-index 0.5s ease-in-out;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: grab;
+}
+
+.top {
+    top: 0%;
+    transform: scale(0.8) translateZ(-50px); /* Added translateZ for 3D */
+    filter: blur(2px);
+    z-index: 1;
+}
+
+.middle {
+    top: 30%;
+    transform: scale(1) translateZ(50px); /* Added translateZ for 3D */
+    z-index: 2;
+}
+
+.bottom {
+    top: 60%;
+    transform: scale(0.8) translateZ(-50px); /* Added translateZ for 3D */
+    filter: blur(2px);
+    z-index: 1;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    transform-style: preserve-3d; /* Important for 3D effect on inner elements */
+}
+
+.card-image {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Brighter gradient */
+    width: 100%;
+    height: 65%;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0,0,0,0.1); /* More pronounced shadow */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transform: translateZ(20px); /* Added translateZ */
+}
+
+.card-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    transform: translateZ(10px); /* Added translateZ */
+}
+
+.card-circle {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Brighter gradient */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.15); /* More pronounced shadow */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.card-title {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Brighter gradient */
+    width: 100%;
+    height: 45%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: white; /*Ensured text is white*/
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4); /*Added more pronounced text shadow*/
+}
+
+.card-subtitle {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Brighter gradient */
+    width: 85%;
+    height: 45%;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: lightgray; /*Ensured text is lightgray*/
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4); /*Added more pronounced text shadow*/
+
+}
