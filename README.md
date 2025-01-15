@@ -1,6 +1,8 @@
 
 #  TASK A / Card Carousel
 
+<img src="./assets/image.PNG">
+
 ## Overview
 
 This project implements a 3D card carousel with draggable functionality using HTML, CSS, and JavaScript. The carousel displays three cards that rotate between top, middle, and bottom positions, allowing users to interact with it through dragging. The cards have dynamic 3D effects, gradient backgrounds, and detailed animations.
