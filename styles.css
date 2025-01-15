@@ -1,4 +1,3 @@
-/* style.css */
 body {
     background: linear-gradient(to right, #FFA500, #8A2BE2);
     display: flex;
@@ -7,7 +6,7 @@ body {
     min-height: 100vh;
     margin: 0;
     overflow: hidden;
-    perspective: 1000px; /* Add perspective to the body */
+    perspective: 1000px;
 }
 
 .card-container {
@@ -20,19 +19,19 @@ body {
     position: absolute;
     width: 100%;
     height: 320px;
-    background: rgba(255, 255, 255, 0.08); /* Slightly brighter background */
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 20px;
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3), /* Increased shadow blur */
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3),
                 12px 12px 30px rgba(0, 0, 0, 0.35),
                 inset 0 0 2px rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(14px); /* Increased blur */
+    backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: 2px solid rgba(255, 255, 255, 0.7); /* Slightly stronger border */
+    border: 2px solid rgba(255, 255, 255, 0.7);
     padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform-style: preserve-3d; /* Important for 3D effect on children */
+    transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, top 0.5s ease-in-out, z-index 0.5s ease-in-out;
     box-sizing: border-box;
     user-select: none;
@@ -41,20 +40,20 @@ body {
 
 .top {
     top: 0%;
-    transform: scale(0.8) translateZ(-50px); /* Added translateZ for 3D */
+    transform: scale(0.8) translateZ(-50px);
     filter: blur(2px);
     z-index: 1;
 }
 
 .middle {
     top: 30%;
-    transform: scale(1) translateZ(50px); /* Added translateZ for 3D */
+    transform: scale(1) translateZ(50px);
     z-index: 2;
 }
 
 .bottom {
     top: 60%;
-    transform: scale(0.8) translateZ(-50px); /* Added translateZ for 3D */
+    transform: scale(0.8) translateZ(-50px);
     filter: blur(2px);
     z-index: 1;
 }
@@ -65,18 +64,18 @@ body {
     width: 100%;
     height: 100%;
     justify-content: space-around;
-    transform-style: preserve-3d; /* Important for 3D effect on inner elements */
+    transform-style: preserve-3d;
 }
 
 .card-image {
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Brighter gradient */
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
     width: 100%;
     height: 65%;
     border-radius: 14px;
     margin-bottom: 10px;
-    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0,0,0,0.1); /* More pronounced shadow */
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0,0,0,0.1);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    transform: translateZ(20px); /* Added translateZ */
+    transform: translateZ(20px);
 }
 
 .card-details {
@@ -85,16 +84,16 @@ body {
     align-items: center;
     height: 30%;
     width: 100%;
-    transform: translateZ(10px); /* Added translateZ */
+    transform: translateZ(10px);
 }
 
 .card-circle {
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Brighter gradient */
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
     width: 45px;
     height: 45px;
     border-radius: 50%;
     margin-right: 15px;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.15); /* More pronounced shadow */
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
     border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -107,25 +106,24 @@ body {
 }
 
 .card-title {
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Brighter gradient */
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
     width: 100%;
     height: 45%;
     border-radius: 8px;
     margin-bottom: 8px;
-    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    color: white; /*Ensured text is white*/
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.4); /*Added more pronounced text shadow*/
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 
 .card-subtitle {
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Brighter gradient */
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
     width: 85%;
     height: 45%;
     border-radius: 8px;
-    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    color: lightgray; /*Ensured text is lightgray*/
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.4); /*Added more pronounced text shadow*/
-
+    color: lightgray;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
